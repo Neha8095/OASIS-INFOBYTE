@@ -1,0 +1,41 @@
+# ATM Management System using Core Java
+
+## Project Description
+The ATM Management System is a console-based Java application developed using Core Java. It simulates basic ATM operations and helps users manage their bank accounts through a simple menu-driven interface.
+
+## Features
+- PIN-based user authentication
+- Balance inquiry
+- Cash withdrawal
+- Cash deposit
+- Account management
+- Menu-driven console interface
+
+## Technologies Used
+- Java
+- Core Java
+- Object-Oriented Programming (OOP)
+- VS Code
+
+## Project Structure
+- `Main.java` – Main entry point of the application
+- `ATM.java` – Handles ATM operations
+- `Account.java` – Manages account details and balance
+
+## How to Run
+1. Install the Java Development Kit (JDK).
+2. Open the project folder in VS Code.
+3. Open the terminal in the project directory.
+4. Compile the Java files:
+
+   `javac Main.java ATM.java Account.java`
+
+5. Run the application:
+
+   `java Main`
+
+## Project Objective
+The objective of this project is to understand Core Java programming, classes and objects, encapsulation, conditional statements, and basic banking operations.
+
+## Note
+This is an educational project. It does not use JDBC, MySQL, or any external database.
