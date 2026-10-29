@@ -190,19 +190,3 @@ Logged out successfully.
 - **Account cannot be found after restarting:** this is expected because the program intentionally stores data only in memory.
 - **The ATM refuses another account:** the fixed array capacity is 10 accounts; increase `MAX_ACCOUNTS` if the exercise needs more.
 
-## 8. Important limitations
-
-This is a learning exercise, not banking software. PINs are kept as plain strings in memory, there is no persistent storage, no concurrent access, and balances use `double` for beginner-friendly arithmetic. Real financial software needs secure authentication, durable storage, audit controls, and decimal-safe money handling.
-
-## 9. Core Java interview questions
-
-1. **What is a class, and how is it different from an object?** A class describes fields and behavior; an object is a particular instance created from that description.
-2. **How does `Account` demonstrate encapsulation?** Its fields are private, and access is provided through methods rather than direct field access.
-3. **What is the difference between the two `Account` constructors?** The default constructor makes an empty account; the parameterized constructor initializes an account from supplied values.
-4. **Why is the PIN a `String` instead of an integer?** A string preserves leading zeroes and is compared as text.
-5. **How can an array hold multiple accounts?** Each array element stores a reference to an `Account` object; the program tracks how many slots are occupied.
-6. **Why use `accountCount` with the account array?** It identifies the filled portion of the array so searches do not inspect unused `null` positions.
-7. **What is the purpose of `try` and `catch` in input methods?** They let the program recover from text that cannot be parsed as a number instead of terminating.
-8. **Why does the ATM use both `while` and `for` loops?** `while` repeats menus and input prompts; `for` is useful for bounded work such as searching arrays or counting PIN attempts.
-9. **How does a transfer keep both balances consistent?** It verifies all conditions first, then deducts from the sender and credits the receiver as one operation in the program flow.
-10. **Why is inheritance not used in this design?** There are no account-specific behaviors that need different implementations, so inheritance would add complexity without a benefit.
