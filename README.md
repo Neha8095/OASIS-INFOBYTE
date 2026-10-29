@@ -165,28 +165,5 @@ Account type: Savings
 Balance: 525.00
 ```
 
-Notice the PIN is not printed in account details.
 
-### Three incorrect PIN attempts and logout
-
-```text
-Enter PIN: 0000
-Incorrect PIN. Attempts left: 2
-Enter PIN: 0000
-Incorrect PIN. Attempts left: 1
-Enter PIN: 0000
-Too many incorrect PIN attempts. Returning to the main menu.
-
-Logged out successfully.
-```
-
-## 7. Common errors and solutions
-
-- **`javac` is not recognized:** install a JDK and make sure its `bin` folder is on `PATH`; reopen the terminal afterward.
-- **`cannot find symbol` for `Account` or `ATM`:** compile all three `.java` files from the project folder using the command above.
-- **`class Account is public, should be declared in a file named Account.java`:** Java requires a public class name to match its filename, including capitalization.
-- **A PIN such as `0123` loses its first zero:** represent PINs as `String`, not `int`.
-- **The program says an amount is invalid:** deposit and withdrawal amounts must be greater than zero; the initial balance may be zero.
-- **Account cannot be found after restarting:** this is expected because the program intentionally stores data only in memory.
-- **The ATM refuses another account:** the fixed array capacity is 10 accounts; increase `MAX_ACCOUNTS` if the exercise needs more.
 
